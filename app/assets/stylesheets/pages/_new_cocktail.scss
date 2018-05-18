@@ -1,16 +1,22 @@
 .add-dose {
-  background: #eee;
-  padding: 20px;
-  border-radius: 5px;
-  border: 1px solid #eee;
-  box-shadow: 1px 1px 1px #ccc;
+  background-color: white;
+  padding: 40px;
+  box-shadow: 1px 1px 1px #eaeaea;
   position: absolute;
-  width: 100vh;
+  width: 600px;
+  margin-left:150px;
+  margin-top: 120px;
 }
 .card-details {
   position: relative;
   top: -30px;
 }
+
+i.fas.fa-trash-alt {
+    font-size: 16px;
+    color: black;
+}
+
 
 input#cocktail_photo {
     font-size: 12px;
@@ -23,13 +29,13 @@ input.btn.btn-primary {
     font-size: 14px;
 }
 
-input.btn.btn-primary:hover{
-  background-color: black;
+.btn.btn-primary:hover{
+  background-color: black!important;
   color: white;
 }
 
 
-input#cocktail_name, textarea#cocktail_description {
+span.select2-selection.select2-selection--single,input#dose_description, input#cocktail_name, textarea#cocktail_description {
     border: none;
     box-shadow: none;
     border: 1px solid black;
