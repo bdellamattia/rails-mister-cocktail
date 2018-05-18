@@ -1,12 +1,11 @@
 class CocktailsController < ApplicationController
-  before_action :set_cocktail, only: [:show, :update, :destroy]
+  before_action :set_cocktail, only: [:show, :update, :destroy, :edit]
   def index
     @cocktails = Cocktail.all
   end
 
   def show
     @dose = Dose.new
-    @in_update = false
   end
 
   def new
@@ -22,13 +21,15 @@ class CocktailsController < ApplicationController
     end
   end
 
+
+  def edit
+  end
+
   def update
     @dose = Dose.new
-    if params["commit"] != "Validate"
-      @in_update = true
+    if params["commit"] != "go for it"
       render 'cocktails/show'
     else
-      @in_update = false
       @cocktail = Cocktail.find(params[:id])
       @cocktail.update(cocktail_params)
       render 'cocktails/show'

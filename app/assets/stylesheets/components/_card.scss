@@ -1,9 +1,10 @@
 .card {
   height: 300px;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
   color: white;
+  padding: 20px;
   position: relative;
   margin: 20px 0px;
 }
@@ -17,17 +18,22 @@
 .card-category {
   position: absolute;
   top: 10px;
-  left: 10px;
-  font-size: 15px;
+  left: 20px;
+  font-size: 10px;
   text-transform: uppercase;
+  background-color: white;
+  padding: 5px;
+  color: black;
+  text-shadow: none;
+
 }
 .card-description {
   position: absolute;
   bottom: 10px;
-  left: 10px;
+  left: 20px;
 }
 .card-description h2 {
-  font-size: 24px;
+  font-size: 26px;
 }
 .card-description p {
   font-size: 14px;

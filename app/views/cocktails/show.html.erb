@@ -1,38 +1,28 @@
+<div class="show-content">
 
-<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path @cocktail.photo.url %>);">
-  <div class="container">
-    <div class="row">
-    <div class="col-xs-12 col-md-6">
-    <h1 class="text-white"><%= @cocktail.name %> <%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, cocktail_path(@cocktail.id), method: :delete %></h1>
-    <p class="text-white">
-      <% if @in_update == false %>
-      <%= @cocktail.description %> <%= link_to '<i class="fas fa-edit"></i>'.html_safe, "#", method: :patch %>
-    </p>
-    <% else %>
-      <%= render '/cocktails/form_edit' %>
+  <div class="cocktail_header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.photo %>')">
+
+    <h1 class="text-white"><%= @cocktail.name.downcase %></h1>
+    <p class="text-white"> <%= @cocktail.description %></p>
+    <%= link_to cocktail_path(@cocktail.id), method: :delete do %>
+      <i class="fas fa-trash-alt"></i>
     <% end %>
   </div>
-</div>
-</div>
 
-<div class="col-xs-12 col-md-6">
-<div class="container card-details-parent">
-  <div class="card-details">
-    <div class="add-dose">
-      <h2>Ingredients</h2>
-      <% @cocktail.doses.each  do |dose| %>
-        <p>
-          <strong><%= dose.ingredient.name %></strong>
-          &nbsp;-&nbsp;
-          <%= dose.description %>
-          &nbsp;-&nbsp;
-          <%= link_to "<i class='fas fa-trash-alt'></i>".html_safe, dose_path(dose.id), method: :delete %>
-        </p>
+  <div class="cocktail_doses">
+    <h2>ingredients</h2>
+    <% @cocktail.doses.each  do |dose| %>
+    <strong><%= dose.ingredient.name.downcase %></strong> &nbsp;-&nbsp;
+    <%= dose.description %> <%= link_to dose_path(dose.id), method: :delete do %>
+      <i class="fas fa-trash-alt"></i>
       <% end %>
-      <%= render '/doses/form' %>
-    </div>
+    <% end %>
+    <%= render '/doses/form' %>
   </div>
-</div>
-</div>
-  <%= link_to "Back", cocktails_path %>
+
+  <div class="back_home">
+  <%= image_tag "https://media.giphy.com/media/D3GcOi536uBS8/giphy.gif", alt: "Mixologic", width: 200 %>
+  <%= link_to "baby come back", cocktails_path %>
+  </div>
+
 </div>

@@ -2,8 +2,9 @@
 .navbar-wagon {
   background: transparent;
   transition: all 0.5s ease;
-  height: 70px;
-  padding: 0px 30px;
+  height: 50px;
+  margin-top: 20px;
+  padding: 0px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,10 +12,10 @@
 
 /* Logo */
 .navbar-wagon-brand img {
-  height: 50px;
-  font-size:30px;
-  color:black;
+  height: 90px;
+  margin-top: 15px;
 }
+
 
 /* User Avatar */
 .navbar-wagon .avatar {
@@ -45,8 +46,8 @@
     color: black;
     border: 1px solid;
     transform: translateY(-100px);
-    font-family: quicksand;
 }
+
 .navbar-wagon-link:hover {
   color: white;
   background-color: black;
