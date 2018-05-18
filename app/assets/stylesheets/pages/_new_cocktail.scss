@@ -11,3 +11,26 @@
   position: relative;
   top: -30px;
 }
+
+input#cocktail_photo {
+    font-size: 12px;
+}
+
+input.btn.btn-primary {
+    background-color: white!important;
+    color: black;
+    border: 1px solid;
+    font-size: 14px;
+}
+
+input.btn.btn-primary:hover{
+  background-color: black;
+  color: white;
+}
+
+
+input#cocktail_name, textarea#cocktail_description {
+    border: none;
+    box-shadow: none;
+    border: 1px solid black;
+}

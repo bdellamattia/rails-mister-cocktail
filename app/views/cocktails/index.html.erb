@@ -1,10 +1,14 @@
 <div class="container">
-<h1>Your <span id="banner-typed-text"></span></h1>
+<h1>because cocktails bar are <span id="banner-typed-text"></span></h1>
+<h4>create your own!</h4>
+<br>
+<div><%= link_to "add yours", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-link" %></div>
+<br>
 <div class="row">
   <% @cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail.id) do %>
-      <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cocktail.img_url %>);">
+      <div class="col-xs-12 col-sm-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cocktail.photo %>);">
           <div class="card-category">New</div>
           <div class="card-description">
             <h2> <%= cocktail.name %></h2>
